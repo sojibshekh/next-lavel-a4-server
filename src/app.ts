@@ -8,7 +8,7 @@ const app : Application = express();
 
 app.use(
   cors({
-    origin: ['http://localhost:5173', 'live-deploy-url']
+    origin: ['https://next-lavel-a4-backend.vercel.app/']
    })
 );
 
