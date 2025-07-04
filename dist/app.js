@@ -9,7 +9,7 @@ const borrow_controler_1 = require("./app/controllers/borrow.controler");
 const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({
-    origin: ['https://next-lavel-a4-backend.vercel.app/']
+    origin: ['https://next-lavel-a4-fronted.vercel.app', 'http://localhost:5173',]
 }));
 app.use(express_1.default.json());
 app.use("/api", books_controler_1.bookRoutes);

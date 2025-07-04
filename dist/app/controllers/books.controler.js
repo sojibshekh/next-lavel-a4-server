@@ -63,8 +63,8 @@ exports.bookRoutes.patch('/books/:bookId', (req, res) => __awaiter(void 0, void 
     });
 }));
 exports.bookRoutes.delete('/books/:bookId', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const userId = req.params.userId;
-    const book = yield book_models_1.Book.findByIdAndDelete(userId);
+    const bookId = req.params.bookId;
+    const book = yield book_models_1.Book.findByIdAndDelete(bookId);
     res.status(201).json({
         success: true,
         message: 'Book deleted successfully',

@@ -90,8 +90,9 @@ bookRoutes.patch('/books/:bookId', async (req: Request, res: Response) => {
 
 bookRoutes.delete('/books/:bookId', async (req: Request, res: Response) => {
 
-    const userId = req.params.userId
-    const book = await Book.findByIdAndDelete(userId);
+    const bookId = req.params.bookId;
+
+    const book = await Book.findByIdAndDelete(bookId);
 
     res.status(201).json({
         success: true,
